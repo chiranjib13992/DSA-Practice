@@ -3,7 +3,6 @@ console.log("🚀 JS DSA Benchmark Runner Started\n");
 // Run String problems
 require("./Strings/reverse_string");
 require("./Strings/valid_anagram");
-//require("./Strings/valid_anagram");
 
 
 
