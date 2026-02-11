@@ -7,11 +7,12 @@ function validateAnagram(s, t) {
     const obj = {};
 
     for (let char of s) {
-        obj[char] = 1;
+        obj[char] = (obj[char] || 0) + 1;
     }
 
     for (let char of t) {
-        if (obj[char] !== 1) return false;
+        if (!obj[char]) return false;
+        obj[char] --
     }
 
     return true
