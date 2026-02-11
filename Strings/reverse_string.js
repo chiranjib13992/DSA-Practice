@@ -11,3 +11,14 @@ function isReverse(str1, str2) {
 
 let a2 = isReverse("kattak", "kattaK");
 console.log(a2, 'ooo')
+
+const benchmark = require("../utils/benchmark");
+const testCases = [
+  ["kattak", "kattak"],
+  ["hello", "olleh"],
+  ["abcd", "dcba"],
+  ["abcd", "abcd"],
+  ["racecar", "racecar"]
+];
+//benchmark(isReverse, testCases, "Reverse String Check");
+
