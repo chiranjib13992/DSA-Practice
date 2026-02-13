@@ -1,0 +1,42 @@
+1️⃣ Reverse a String
+
+Given a string s, return the string reversed.
+
+2️⃣ Check Palindrome
+
+Given a string s, check if it is a palindrome (reads the same forward and backward).
+
+3️⃣ Valid Anagram
+Given two strings s and t, return true if t is an anagram of s, otherwise return
+
+4️⃣ Count Vowels
+
+Given a string s, count the total number of vowels (a, e, i, o, u) in it.
+
+5️⃣ First Non-Repeating Character
+
+Given a string s, find the first character that does not repeat and return its index. If none exists, return -1.
+
+6️⃣ Remove Duplicates from String
+
+Given a string s, remove duplicate characters while keeping the first occurrence.
+
+7️⃣ Check Substring
+
+Given two strings s and sub, check if sub exists inside s. Return true or false.
+
+8️⃣ Capitalize First Letter of Each Word
+
+Given a sentence string, return the sentence with the first letter of each word capitalized.
+
+9️⃣ Count Character Frequency
+
+Given a string s, return an object that shows the frequency of each character.
+
+Example:
+Input: "aabcc"
+Output: { a: 2, b: 1, c: 2 }
+
+🔟 Longest Word in a Sentence
+
+Given a sentence string, return the longest word in the sentence.
