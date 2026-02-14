@@ -17,15 +17,23 @@ function isPalidrome(str1, st2) {
 
 const benchmark = require("../utils/benchmark");
 
-const isPal = isPalidrome("madam", "madam")
-console.log(isPal, 'test case')
-
 const testCases = [
-    ["madam", "madam"],
-    ["hello", "olleh"],
-    ["abcd", "dcba"],
-    ["abcd", "abcd"],
-    [" racecar", "racecar"]
+  { input: ["madam", "madam"], expected: true },
+  { input: ["hello", "olleh"], expected: true },
+  { input: ["abcd", "dcba"], expected: true },
+  { input: ["abcd", "abcd"], expected: false },
+  { input: ["racecar", "racecar"], expected: true },
+  { input: ["", ""], expected: true },
+  { input: ["a", "a"], expected: true },
+  { input: ["aa", "aa"], expected: true },
+  { input: ["ab", "ba"], expected: false },
+  { input: ["Level", "Level"], expected: false },   // case sensitive
+  { input: ["level", "level"], expected: true },
+  { input: ["12321", "12321"], expected: true },
+  { input: ["12345", "54321"], expected: false },
+  { input: [" racecar", "racecar"], expected: false }, // leading space
+  { input: ["noon", "noon"], expected: true }
 ];
+
 
 benchmark(isPalidrome, testCases, "Reverse String Check");
