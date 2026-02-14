@@ -14,11 +14,22 @@ console.log(a2, 'ooo')
 
 const benchmark = require("../utils/benchmark");
 const testCases = [
-  ["kattak", "kattak"],
-  ["hello", "olleh"],
-  ["abcd", "dcba"],
-  ["abcd", "abcd"],
-  ["racecar", "racecar"]
+  { input: ["kattak", "kattak"], expected: true },
+  { input: ["hello", "olleh"], expected: true },
+  { input: ["abcd", "dcba"], expected: true },
+  { input: ["abcd", "abcd"], expected: false },
+  { input: ["racecar", "racecar"], expected: true },
+  { input: ["", ""], expected: true },
+  { input: ["a", "a"], expected: true },
+  { input: ["a", "b"], expected: false },
+  { input: ["12345", "54321"], expected: true },
+  { input: ["OpenAI", "IAnepO"], expected: true },
+  { input: ["Level", "leveL"], expected: true },
+  { input: ["hello", "hello "], expected: false },
+  { input: ["!@#", "#@!"], expected: true },
+  { input: ["abc", "cbaa"], expected: false },
+  { input: ["abcd", "dcbb"], expected: false }
 ];
-//benchmark(isReverse, testCases, "Reverse String Check");
+
+benchmark(isReverse, testCases, "Reverse String Check");
 
