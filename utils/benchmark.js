@@ -1,13 +1,23 @@
 function benchmark(fn, testCases, label = "Test") {
-  // Force garbage collection if available (node --expose-gc)
   if (global.gc) global.gc();
 
   const startMemory = process.memoryUsage().heapUsed;
   const startTime = process.hrtime.bigint();
 
-  for (const test of testCases) {
-    fn(...test);
-  }
+  let allPassed = true;
+
+  testCases.forEach((test, index) => {
+    const actual = fn(test.input);
+    const expected = test.expected;
+
+    if (actual !== expected) {
+      allPassed = false;
+      console.log(`❌ Test case failed at index ${index}`);
+      console.log(`   Input: ${JSON.stringify(test.input)}`);
+      console.log(`   Expected: ${expected}`);
+      console.log(`   Got: ${actual}\n`);
+    }
+  });
 
   const endTime = process.hrtime.bigint();
   const endMemory = process.memoryUsage().heapUsed;
@@ -16,6 +26,11 @@ function benchmark(fn, testCases, label = "Test") {
   const memoryKb = (endMemory - startMemory) / 1024;
 
   console.log(`\n📊 ${label} Benchmark`);
+
+  if (allPassed) {
+    console.log("✅ All test cases passed!");
+  }
+
   console.log(`⏱ Time: ${timeMs.toFixed(3)} ms`);
   console.log(`💾 Memory: ${memoryKb.toFixed(2)} KB`);
 }
