@@ -7,7 +7,9 @@ function benchmark(fn, testCases, label = "Test") {
   let allPassed = true;
 
   testCases.forEach((test, index) => {
-    const actual = fn(test.input);
+    const actual = Array.isArray(test.input)
+      ? fn(...test.input)
+      : fn(test.input);
     const expected = test.expected;
 
     if (actual !== expected) {
