@@ -7,66 +7,52 @@ function validateAnagram(s, t) {
     const obj = {};
 
     for (let char of s) {
-        obj[char] = (obj[char] || 0) + 1;
+        obj[char.toLowerCase()] = (obj[char.toLowerCase()] || 0) + 1;
     }
 
     for (let char of t) {
-        if (!obj[char]) return false;
-        obj[char] --;
+        if (!obj[char.toLowerCase()]) return false;
+        obj[char.toLowerCase()] --;
     }
 
     return true
 }
 
 
-const a = validateAnagram("silent", "listen");
-console.log(a, '0')
-
-
 // Method -2 
 
 function isAnagram(str1, str2){
     if(str1.length !== str2.length) return false;
-    if(str1.split('').sort().join('') === str2.split('').sort().join('')) return true;
+    if(str1.toLowerCase().split('').sort().join('') === str2.toLowerCase().split('').sort().join('')) return true;
     return false;
 
 }
 
-let a2 = isAnagram("silent", "listen");
-console.log(a2 , 'Test')
-
-// function to generate Anagram pairs of given size.
-function generateAnagramPair(size) {
-  const chars = "abcdefghijklmnopqrstuvwxyz";
-  let str = "";
-
-  for (let i = 0; i < size; i++) {
-    str += chars[Math.floor(Math.random() * chars.length)];
-  }
-
-  // Shuffle to create a valid anagram
-  const shuffled = str
-    .split("")
-    .sort(() => Math.random() - 0.5)
-    .join("");
-
-  return [str, shuffled];
-}
-
-console.log(generateAnagramPair(19), 'io')
-
-console.log(generateAnagramPair(21), 'io')
-console.log(generateAnagramPair(29), 'io')
-
 
 const testCases = [
-  ["ttttttttttssssssssssrrrrrrrrrrqqqqqqqqqqppppppppppoooooooooonnnnnnnnnnmmmmmmmmmmttttttttttssssssssssrrrrrrrrrrqqqqqqqqqqppppppppppoooooooooonnnnnnnnnnmmmmmmmmmmttttttttttssssssssssrrrrrrrrrrqqqqqqqqqqppppppppppoooooooooonnnnnnnnnnmmmmmmmmmm", "mmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrsssssssssstttttttttt"],
-  ["splipghlntnrtsibfamme", "lhiltifmrpmssgepannbt"],
-  ["fwpkdeldfvzrmigokzepipcmfmjgh", "ifcvpzhpjodekmlpgfgimwrfkmzed"],
-  ["abcd", "abcd"],
-  ["racecar", "racecar"]
+  { input: ["listen", "silent"], expected: true },
+  { input: ["triangle", "integral"], expected: true },
+  { input: ["apple", "papel"], expected: true },
+  { input: ["rat", "car"], expected: false },
+  { input: ["hello", "billion"], expected: false },
+  { input: ["", ""], expected: true },
+  { input: ["a", "a"], expected: true },
+  { input: ["a", "b"], expected: false },
+  { input: ["Dormitory", "dirtyroom"], expected: true },
+  { input: ["Conversation", "Voicesranton"], expected: true },
+  { input: ["Astronomer", "Moonstarer"], expected: true },
+  { input: ["School master", "The classroom"], expected: true },
+  { input: ["Debit Card", "Bad Credit"], expected: true },
+  { input: ["The eyes", "They see"], expected: true },
+  { input: ["Night", "Thingg"], expected: false },
+  { input: ["abcd", "abc"], expected: false },
+  { input: ["anagram", "nagaram"], expected: true },
+  { input: ["William Shakespeare", "I am a weakish speller"], expected: true },
+  { input: ["123", "321"], expected: true },
+  { input: ["123", "322"], expected: false }
 ];
-benchmark(validateAnagram, testCases, "Anagram String Check");
-benchmark(isAnagram, testCases, "Anagram  Sorting String Check");
+
+benchmark(isAnagram, testCases, "Anagram String Check");
+benchmark(validateAnagram, testCases, "Anagram  Sorting String Check");
 
 
