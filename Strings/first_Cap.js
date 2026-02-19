@@ -18,7 +18,7 @@ function firstCap(str) {
         }
     }
 
-    return result;
+    return result; 
 }
 
 

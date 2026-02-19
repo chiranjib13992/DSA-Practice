@@ -8,7 +8,7 @@ console.log("🚀 JS DSA Benchmark Runner Started\n");
 //require("./Strings/non-rep_1st_char");
 //require("./Strings/remvoe_dup");
 //require("./Strings/subStr");
-require("./Strings/first_Cap");
+//require("./Strings/first_Cap");
 
 
 
