@@ -12,7 +12,12 @@ function benchmark(fn, testCases, label = "Test") {
       : fn(test.input);
     const expected = test.expected;
 
-    if (actual !== expected) {
+    const isEqual =
+      typeof actual === "object" && actual !== null
+        ? JSON.stringify(actual) === JSON.stringify(expected)
+        : actual === expected;
+
+    if (!isEqual) {
       allPassed = false;
       console.log(`❌ Test case failed at index ${index}`);
       console.log(`   Input: ${JSON.stringify(test.input)}`);
