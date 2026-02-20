@@ -11,7 +11,9 @@ console.log("🚀 JS DSA Benchmark Runner Started\n");
 //require("./Strings/first_Cap");
 //require("./Strings/charCount");
 //require("./Strings/largestWord")
-require("./Number/Counter");
+//require("./Number/Counter");
+//require("./NestedFunction/nested")
+require("./NestedFunction/problem1");
 
 
 
