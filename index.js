@@ -13,7 +13,8 @@ console.log("🚀 JS DSA Benchmark Runner Started\n");
 //require("./Strings/largestWord")
 //require("./Number/Counter");
 //require("./NestedFunction/nested")
-require("./NestedFunction/problem1");
+//require("./NestedFunction/problem1");
+require("./NestedFunction/problem2");
 
 
 
