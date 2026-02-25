@@ -1,0 +1,61 @@
+🔢 1. Reverse a Number
+
+Given an integer n, reverse its digits.
+Example:
+Input: 1234 → Output: 4321
+
+🔢 2. Check Palindrome Number
+
+Check whether a number reads the same forward and backward.
+Example:
+Input: 121 → Output: true
+Input: 123 → Output: false
+
+🔢 3. Count Digits
+
+Count the total number of digits in a number.
+Example:
+Input: 98765 → Output: 5
+
+🔢 4. Sum of Digits
+
+Find the sum of digits of a number.
+Example:
+Input: 123 → Output: 6
+
+🔢 5. Armstrong Number
+
+Check whether a number is an Armstrong number.
+(For 3-digit: sum of cube of digits = number)
+Example:
+Input: 153 → Output: true
+
+🔢 6. Prime Number Check
+
+Check whether a number is prime.
+Example:
+Input: 7 → Output: true
+
+🔢 7. Print All Divisors
+
+Print all divisors of a given number.
+Example:
+Input: 12 → Output: 1 2 3 4 6 12
+
+🔢 8. Greatest Common Divisor (GCD)
+
+Find the GCD of two numbers.
+Example:
+Input: 12, 18 → Output: 6
+
+🔢 9. Least Common Multiple (LCM)
+
+Find the LCM of two numbers.
+Example:
+Input: 4, 6 → Output: 12
+
+🔢 10. Fibonacci Number (Nth Term)
+
+Find the Nth Fibonacci number.
+Example:
+Input: 6 → Output: 8
