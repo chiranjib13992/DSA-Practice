@@ -1,0 +1,19 @@
+Find largest element in array
+
+Find smallest element in array
+
+Find sum of all elements
+
+Find average of array
+
+Reverse an array
+
+Count even and odd numbers in array
+
+Find second largest element
+
+Remove duplicates from array
+
+Search element in array (Linear search)
+
+Sort array in ascending order
