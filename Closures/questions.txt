@@ -1,0 +1,19 @@
+Create a step counter that increases by 2 every call.
+
+Create a function that tracks how many times it has been called.
+
+Create a score tracker with addPoints() and reset().
+
+Create a function that remembers the last 3 inputs.
+
+Create a toggle function (true/false switch).
+
+Create a limited-use function that works only 5 times.
+
+Create a function that stores a list internally and allows adding elements.
+
+Create a password attempt tracker (lock after 3 wrong tries).
+
+Create a running average calculator.
+
+Create a function that counts vowels in strings cumulatively.
