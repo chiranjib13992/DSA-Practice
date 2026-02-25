@@ -1,0 +1,66 @@
+🧩 1. Add Using Nested Function
+
+Create a function add(a) that returns another function b(c) which returns a + c.
+
+Example:
+
+add(5)(3) → 8
+🧩 2. Counter with Closure
+
+Create a function counter() that returns a nested function which increments and returns a count each time it’s called.
+
+Example:
+
+let c = counter();
+c() → 1  
+c() → 2  
+c() → 3
+🧩 3. Multiply with Private Variable
+
+Create a function multiplier(x) that returns a nested function which multiplies x with any given number.
+
+Example:
+
+let double = multiplier(2);
+double(5) → 10
+🧩 4. Power Function
+
+Create a function power(n) that returns a nested function to calculate n raised to a given exponent.
+
+Example:
+
+power(2)(3) → 8
+🧩 5. String Repeater
+
+Create a function repeatString(str) that returns a nested function which repeats the string n times.
+
+Example:
+
+repeatString("Hi")(3) → "HiHiHi"
+🧩 6. Private Bank Balance
+
+Create a function bankAccount(initialBalance) that returns nested functions:
+
+deposit(amount)
+
+withdraw(amount)
+
+checkBalance()
+
+Balance should be private.
+
+🧩 7. Check Even/Odd Using Nested Function
+
+Create a function checkNumber(num) that has a nested function to determine if the number is even or odd.
+
+🧩 8. Sum of Array Using Nested Helper
+
+Create a function sumArray(arr) that uses a nested helper function to calculate the sum.
+
+🧩 9. Memoized Fibonacci
+
+Create a function memoFib() that returns a nested function which calculates Fibonacci numbers using memoization.
+
+🧩 10. Function Logger
+
+Create a function logger(msg) that returns a nested function which prints the message with a timestamp whenever called.
